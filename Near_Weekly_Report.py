@@ -154,23 +154,23 @@ with st.expander("Check hourly activity"):
     st.altair_chart(alt.Chart(df)
         .mark_line()
         .encode(x='date:N', y='active_users:Q')
-        .properties(title='Hourly active users'))
+        .properties(width=1200,title='Hourly active users'))
     
     st.altair_chart(alt.Chart(df)
         .mark_line()
         .encode(x='date:N', y='new_users:Q')
-        .properties(title='Hourly new users'))
+        .properties(width=1200,title='Hourly new users'))
 
 with st.expander("Check daily activity"):
     st.altair_chart(alt.Chart(df2)
         .mark_line()
         .encode(x='date:N', y='active_users:Q')
-        .properties(title='Daily active users'))
+        .properties(width=1200,title='Daily active users'))
     
     st.altair_chart(alt.Chart(df2)
         .mark_line()
         .encode(x='date:N', y='new_users:Q')
-        .properties(title='Daily new users'))
+        .properties(width=1200,title='Daily new users'))
     
     
     
@@ -268,23 +268,23 @@ with st.expander("Check hourly activity"):
     st.altair_chart(alt.Chart(df)
         .mark_line()
         .encode(x='date:N', y='active_contracts:Q')
-        .properties(title='Hourly active contracts'))
+        .properties(width=1200,title='Hourly active contracts'))
     
     st.altair_chart(alt.Chart(df3)
         .mark_line()
         .encode(x='date:N', y='new_contracts:Q')
-        .properties(title='Hourly new contracts'))
+        .properties(width=1200,title='Hourly new contracts'))
 
 with st.expander("Check daily activity"):
     st.altair_chart(alt.Chart(df2)
         .mark_line()
         .encode(x='date:N', y='active_contracts:Q')
-        .properties(title='Daily active contracts'))
+        .properties(width=1200,title='Daily active contracts'))
     
     st.altair_chart(alt.Chart(df4)
         .mark_line()
         .encode(x='date:N', y='new_contracts:Q')
-        .properties(title='Daily new contracts'))    
+        .properties(width=1200,title='Daily new contracts'))    
     
     
 
@@ -495,23 +495,23 @@ with st.expander("Check hourly activity"):
     st.altair_chart(alt.Chart(df)
         .mark_bar()
         .encode(x='date:N', y='n_validators:Q')
-        .properties(title='Hourly active validators'))
+        .properties(width=1200,title='Hourly active validators'))
     
     st.altair_chart(alt.Chart(df)
         .mark_line()
         .encode(x='date:N', y='total_near_staked:Q')
-        .properties(title='Hourly total NEAR staked'))
+        .properties(width=1200,title='Hourly total NEAR staked'))
 
 with st.expander("Check daily activity"):
     st.altair_chart(alt.Chart(df2)
         .mark_line()
         .encode(x='date:N', y='n_validators:Q')
-        .properties(title='Daily active validators'))
+        .properties(width=1200,title='Daily active validators'))
     
     st.altair_chart(alt.Chart(df2)
         .mark_line()
         .encode(x='date:N', y='total_near_staked:Q')
-        .properties(title='Daily total NEAR staked'))
+        .properties(width=1200,title='Daily total NEAR staked'))
 
 
 st.markdown('This dashboard has been done by _Cristina Tintó_ powered by **Flipside Crypto** data and carried out for **MetricsDAO**.')
