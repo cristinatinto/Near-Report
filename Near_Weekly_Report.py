@@ -137,7 +137,7 @@ order by 1 asc
 
 """
 
-st.experimental_memo(ttl=50000)
+st.experimental_memo(ttl=500000)
 def memory(code):
     data=sdk.query(code)
     return data
@@ -243,7 +243,7 @@ group by 1
 order by 1 asc 
 """
 
-st.experimental_memo(ttl=50000)
+st.experimental_memo(ttl=500000)
 def memory(code):
     data=sdk.query(code)
     return data
@@ -332,7 +332,7 @@ avg(gas_used/pow(10,12)) as avg_gas
 
 """
 
-st.experimental_memo(ttl=50000)
+st.experimental_memo(ttl=500000)
 def memory(code):
     data=sdk.query(code)
     return data
