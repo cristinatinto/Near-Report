@@ -188,7 +188,7 @@ st.write('')
 sql="""
 select
 trunc(x.block_timestamp,'hour') as date,
-  count(distinct receiver_id) as active_contracts
+  count(distinct x.receiver_id) as active_contracts
 from near.core.fact_actions_events x  
 join near.core.fact_receipts y on x.tx_hash=y.tx_hash
 where action_name <> 'DeployContract'
@@ -201,7 +201,7 @@ order by 1 asc
 sql2="""
 select
 trunc(x.block_timestamp,'day') as date,
-  count(distinct receiver_id) as active_contracts
+  count(distinct x.receiver_id) as active_contracts
 from near.core.fact_actions_events x  
 join near.core.fact_receipts y on x.tx_hash=y.tx_hash
 where action_name <> 'DeployContract'
@@ -213,7 +213,7 @@ order by 1 asc
 sql3="""
 SELECT
 trunc(first_date,'hour') as date,
-count(distinct receiver_id ) as new_contracts,
+count(distinct x.receiver_id ) as new_contracts,
   sum(new_contracts) over (order by date) as cum_new_contracts
 from (select
   receiver_id,
@@ -230,7 +230,7 @@ order by 1 asc
 sql4="""
 SELECT
 trunc(first_date,'day') as date,
-count(distinct receiver_id ) as new_contracts,
+count(distinct x.receiver_id ) as new_contracts,
   sum(new_contracts) over (order by date) as cum_new_contracts
 from (select
   receiver_id,
